@@ -1,14 +1,13 @@
-main :: IO ()
-media3 :: Float -> Float -> Float -> String
-media3 v1 v2 v3 = if (v1 + v2 + v3) / 3.0 > 7 then "Aprovado." else "Reprovado."
 main = do
-  putStrLn ("\nDigite o valor 1.")
-  v1 <- readLn
-
-  putStrLn ("\nDigite o valor 2.")
-  v2 <- readLn
-
-  putStrLn ("\nDigite o valor 3.")
-  v3 <- readLn
-
-  putStrLn ("\n" ++ show (media3 v1 v2 v3))
+  putStrLn "Digite o nome da pessoa: "
+  nome <- getLine
+  putStrLn "Digite o sexo da pessoa (M/F): "
+  sexo <- getLine
+  putStrLn "Digite o estado civil da pessoa (SOLTEIRO/CASADO): "
+  estadoCivil <- getLine
+  if sexo == "F" && estadoCivil == "CASADO"
+    then do
+      putStrLn "Digite o tempo de casamento em anos: "
+      tempoCasamento <- getLine
+      putStrLn $ "A pessoa de nome " ++ nome ++ " está casada há " ++ tempoCasamento ++ " anos."
+    else putStrLn $ "A pessoa de nome " ++ nome ++ " não está casada."
