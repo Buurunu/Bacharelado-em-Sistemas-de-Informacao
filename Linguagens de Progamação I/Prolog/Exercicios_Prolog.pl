@@ -4,12 +4,12 @@ progenitor(joao,ana).
 progenitor(jose,julia).
 progenitor(jose,iris).
 progenitor(iris,jorge).
-progenitor(ana,bob_o_bobo).
+progenitor(ana,bob).
 
 masculino(jose).
 masculino(joao).
 masculino(jorge).
-masculino(bob_o_bobo).
+masculino(bob).
 
 feminino(maria).
 feminino(ana).
