@@ -1,10 +1,8 @@
-come(abelha, pólen).
-come(pássaro, abelha).
-come(cobra, pássaro).
+come(abelha, polen).
+come(passaro, abelha).
+come(cobra, passaro).
 come(raposa, cobra).
 
-cadeia_alimentar(X, Y) :-
-   come(X, Y).
-cadeia_alimentar(X, Y) :-
-   come(X, Z),
-   cadeia_alimentar(Z, Y).  
+presa(Y, X) :- come(X, Y).
+
+predador(X, Y) :- come(X, Y).
